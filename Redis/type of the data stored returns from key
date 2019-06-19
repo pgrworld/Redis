@@ -1,0 +1,11 @@
+var redis = require("redis");
+var client = redis.createClient();
+client.set("datatype", "securifi embedded systems");
+client.get("datatype", function(err,res){
+	console.log(res)
+})
+//NOTE: outpus is=> securifi embedded systems
+client.type("datatype",function(err,res){
+	console.log(res)
+})
+//NOTE: output is => string
