@@ -1,0 +1,7 @@
+//del() //if we want to delete the key 
+client.set("key100","securifi");
+client.del("key100");
+client.get("key100",function(err,res){
+	console.log(res);
+})
+//NOTE: output is=> "null"
