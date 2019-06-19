@@ -1,0 +1,6 @@
+//decr() //here we can decreament the value upto required position
+client.set("key",1000);
+client.decrby("key", 101,function(err,res){
+	console.log(res);
+})
+//NOTE: output is => "899"
