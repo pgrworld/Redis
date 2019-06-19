@@ -1,0 +1,13 @@
+var redis = require("redis");  //here keyname is changed "oldkey" to "newkey"
+var client = redis.createClient();
+var obj = {};
+client.set("oldkey","securifi");
+client.rename("oldkey","newkey",function(err,res){
+	console.log(res)
+});
+
+client.get("newkey",function(err,res){
+	console.log(res);
+})
+
+//NOTE: outpus is => "securifi"
