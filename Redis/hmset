@@ -1,0 +1,14 @@
+var redis = require("redis");
+var client = redis.createClient();
+var obj = {}
+obj.fun2 = function(){
+	client.hmset("keys","name", "gowrav", "age", "23", "desgination", "node js developer", "location", "hyderabad");
+}
+
+obj.fun2(client.hgetall("keys", function(err,res){
+	console.log(res)
+}))
+//NOTE: output is=> { name: 'gowrav',
+ // age: '23',
+//  desgination: 'node js developer',
+//  location: 'hyderabad' }
