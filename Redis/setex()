@@ -1,0 +1,10 @@
+var redis = require("redis");
+var client = redis.createClient();
+client.setex("key","10","redis");
+client.TTL("key",function(err,res){
+	console.log(res)
+})
+//NOTE:output is => "10" (sec)
+client.get("key",function(err,res){
+	console.log(res)
+})
