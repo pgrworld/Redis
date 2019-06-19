@@ -1,0 +1,6 @@
+//incr()
+client.set("key",999);
+client.incr("key",function(err,res){
+	console.log(res);
+})
+//NOTE: output is=>"1000"
