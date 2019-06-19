@@ -1,0 +1,6 @@
+//strlen() //it returns the length of the string
+client.set("key","securifi embedded systems");
+client.strlen("key",function(err,res){
+console.log(res)
+})
+//NOTE:output is =>25
