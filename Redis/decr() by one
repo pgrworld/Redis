@@ -1,0 +1,6 @@
+//decr() //here we decreament the value by one
+client.set("key",1000);
+client.decr("key",function(err,res){
+	console.log(res);
+})
+//NOTE: output is =>"999"
