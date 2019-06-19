@@ -1,0 +1,8 @@
+// getrange() //if we want to get a certain part of the string 
+var redis = require("redis");
+var client = redis.createClient();
+client.set("datatype","pentakota rahul");
+client.getrange("datatype",0,5,function(err,res){
+	console.log(res)
+})
+//NOTE:output is => "pentak"
