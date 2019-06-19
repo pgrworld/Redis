@@ -1,0 +1,7 @@
+var redis = require("redis");
+var client = redis.createClient();
+client.mset("key1","value1","key2","value2","key3","value3","key4","value4");
+client.get("key1",function(err,res){
+	console.log(res);
+})
+//NOTE: output is => value1
