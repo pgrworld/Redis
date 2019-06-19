@@ -1,0 +1,11 @@
+//append() //here we can add some value(string) into the key
+client.set("keyname","securifi embedded systems ");
+client.get("keyname",function(err,res){
+	console.log(res)
+})
+//NOTE: output is => "securifi embedded systems "
+client.append("keyname","at madhaur in Hyderabad");
+client.get("keyname",function(err,res){
+	console.log(res)
+}
+//NOTE:output is=> securifi embedded systems at madhaur in Hyderabad
