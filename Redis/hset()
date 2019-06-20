@@ -1,0 +1,14 @@
+//hset() //here we have to create each key:value but we can access at a time all key:values
+var redis = require("redis");
+var client = redis.createClient()
+
+client.hset("myhash","fi4","hello");
+client.hset("myhash","fi5","haiii");
+client.hset("myhash","fi6","byee");
+
+client.hgetall("myhash",function(err,res){
+	console.log(res)
+})
+//NOTE: output is => { fi4: 'hello',
+//                     fi5: 'haiii',
+//                     fi6: 'byee' }
