@@ -8,4 +8,4 @@ client.append("keyname","at madhaur in Hyderabad");
 client.get("keyname",function(err,res){
 	console.log(res)
 }
-//NOTE:output is=> securifi embedded systems at madhaur in Hyderabad
+//NOTE:output is=> securifi embedded systems at madhaur in Hyderabaddd
