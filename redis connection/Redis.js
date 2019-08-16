@@ -10,7 +10,7 @@ client.on('error', function (err) {
     console.log('Something went wrong ' + err);
 });
 
- client.set("key","redis")
+ client.set("key","redis")    //redis.print==>reply:ok(optional)
  client.expire("keys", 2)
 
 client.get("key",function(err,reply){
