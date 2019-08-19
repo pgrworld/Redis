@@ -102,6 +102,45 @@ EX: set key 200
     decrby key 25
     get key  ==>175
 
+//.23 append cmd: is used to append the value with alredy situated value
+EX: set key "rahul"
+    append "pentakota"
+    get key ==> "rahul pentakota"
+
+// HASHS
+//.24 hset cmd: 
+EX: hset key field "gowrav"
+EX: hget key field
+EX: hdel key field
+
+//.25 hexists cmd: is used to know the required is exists or not in the hash field
+EX: hset key field "securifi"
+    hexists key field
+    
+//.26 hgetall cmd: is used to get all hset values at a time
+EX: hset key field1 "one"
+    hset key field2 "two"
+    hset key field3 "three"
+    hset key field4 "four"
+    hgetall key ==> "one" "two" "three" "four" 
+
+//.27 hkeys cmd: is used to get all field names in the hash stored at the key.
+EX: hset key field1 "one"
+    hset key field2 "two"
+    hset key field3 "three"
+    hset key field4 "four"
+    hset key field5 "five"
+    hset key field6 "six"
+hkeys key ==> field1 field2 field3 field4 field5 field6
+
+//.28 hlen cmd: is used to know no.of field is there in that hset 
+EX: hset key field1 "one"
+    hset key field2 "two"
+    hset key field3 "three"
+    hset key field4 "four"
+hlen key  ==> 4 
+
+
 
 
 
