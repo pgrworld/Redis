@@ -150,6 +150,16 @@ EX: hmget key field1 field3 field5
 EX: hvals key
 
 
+// LISTS: Redis Lists are simply lists of strings, sorted by insertion order. You can add elements in Redis lists in the head or the tail of the list.
+//.31 lpush cmd:
+EX lpush key one 
+   lpush key two
+   lpush key three
+   lpush key four 
+   lpush key five
+   
+lrange key 0 8   =>one two three four five
+
 
 
 
