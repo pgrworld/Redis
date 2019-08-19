@@ -140,6 +140,17 @@ EX: hset key field1 "one"
     hset key field4 "four"
 hlen key  ==> 4 
 
+//.29 hmset cmd: is used to set the values for a different fields with a specified key
+EX: hmset key field1 "one" field2 "two" field3 "three" field4 "four" field5 "five"
+
+//.30 hmget cmd: is used to get the required values with a specified key
+EX: hmget key field1 field3 field5
+
+//.31 hvals cmd: is used to get all the values in the hash stored at the key.
+EX: hvals key
+
+
+
 
 
 
