@@ -107,7 +107,7 @@ EX: set key "rahul"
     append "pentakota"
     get key ==> "rahul pentakota"
 
-// HASHS
+// HASHES
 //.24 hset cmd: 
 EX: hset key field "gowrav"
 EX: hget key field
@@ -159,6 +159,67 @@ EX lpush key one
    lpush key five
    
 lrange key 0 8   =>one two three four five
+
+//. rename
+// If we want to change the key name
+EX: set mykey "gowrav"
+    rename mykey mynewkey
+    get mynewkey  ==> "gowrav"
+
+//.32 blpop cmd: if we want to block the key certain time
+
+//.33 lindex cmd: if we want to retrieve the a particular then we are using index position
+EX: lpush key "one"
+    lpush key "two"
+    lpush key "three"
+    lpush key "four"
+    
+    lindex key 0  ==> "one"
+    lindex key -1 == > "four"
+
+//.34 linsert cmd: if we want to insert the key at a specified position
+EX: lpush key "one"
+    lpush key "two"
+    lpush key "three"
+    lpush key "four"
+   
+//  linset key_name required position(before or after) existing value enter new_name
+    linsert key before "three" "securifi"
+    linsert key after  "three" "embedded systems"
+
+lrange key 0 10     ==>  "one" "two" "securifi" "three" "embedded systems" "four"
+
+//.35 lpop cmd: is used to remove and get the first element from the list
+EX: lpush key "one"
+    lpush key "two"
+    lpush key "three"
+    lpush key  "four"
+
+    lpop key   ==> "one"
+
+//.36 lrem cmd: is used to remove the element from the list
+EX: lpush key "one"
+    lpush key "two"
+
+    lrem key 1 "one"  ==> one will be remove
+    
+
+//.37 rpop cmd: is used to remove and get the lost element from the list
+    EX: lpush key "one"
+        lpush key "two"
+        lpush key "three"
+     
+        rpop key   ==> "three"
+
+
+
+// SETS
+
+
+
+
+
+
 
 
 
